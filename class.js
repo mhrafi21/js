@@ -1,51 +1,48 @@
-1. What is a JavaScript Class?
 
+// 1. What is a JavaScript Class?
+// A class in JavaScript is essentially a blueprint for creating objects. It provides a structured way to define properties and methods.
+
+// 🔹 Before ES6, JavaScript used constructor functions and prototypes for object creation and inheritance.
+// 🔹 With ES6 classes, we now have a more object-oriented approach.
+
+// Basic Syntax of a Class:
+// class Car {
+//     constructor(brand, model, year){
+//         this.brand = brand;
+//         this.model = model;
+//         this.year = year;
+//     }
+//     startEngine(){
+
+//         console.log(`${this.brand} ${this.model} is starting!`)
+//     }
+
+//     stopEngine(){
+//         console.log(`${this.brand} ${this.model} is stopping!`)
+//     }
+// }
+
+// const myCar = new Car("Toyota", "Corolla", 2022 );
+// myCar.startEngine(); // Toyota Corolla is starting!
+// myCar.stopEngine(); // Toyota Corolla is stopping!;
+
+// Key Points from the Example:
+// 1. Class Declaration: class Car {} defines the class.
+// 2. Constructor Method: The constructor is a special method used to initialize object properties.
+// 3. Instance Methods: start() and stop() are functions that operate on class instances.
+// 4. Creating an Object: new Car("Toyota", "Corolla", 2022) creates an instance of the Car class.
+
+// JavaScript Classes: Deep Explanation with Examples
+// In JavaScript, classes were introduced in ES6 (ECMAScript 2015) to provide a cleaner, more structured way to work with objects and inheritance. Although JavaScript remains a prototype-based language under the hood, class syntax makes object-oriented programming (OOP) more intuitive and easier to manage.
+
+1. What is a JavaScript Class?
 A class in JavaScript is essentially a blueprint for creating objects. It provides a structured way to define properties and methods.
 
 🔹 Before ES6, JavaScript used constructor functions and prototypes for object creation and inheritance.
 🔹 With ES6 classes, we now have a more object-oriented approach.
 
 Basic Syntax of a Class:
-class Car {
-    constructor(brand, model, year){
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
-    }
-    startEngine(){
-
-        console.log(`${this.brand} ${this.model} is starting!`)
-    }
-
-    stopEngine(){
-        console.log(`${this.brand} ${this.model} is stopping!`)
-    }
-}
-
-const myCar = new Car("Toyota", "Corolla", 2022 );
-myCar.startEngine(); // Toyota Corolla is starting!
-myCar.stopEngine(); // Toyota Corolla is stopping!;
-
-Key Points from the Example:
-1. Class Declaration: class Car {} defines the class.
-2. Constructor Method: The constructor is a special method used to initialize object properties.
-3. Instance Methods: start() and stop() are functions that operate on class instances.
-4. Creating an Object: new Car("Toyota", "Corolla", 2022) creates an instance of the Car class.
-
-JavaScript Classes: Deep Explanation with Examples
-In JavaScript, classes were introduced in ES6 (ECMAScript 2015) to provide a cleaner, more structured way to work with objects and inheritance. Although JavaScript remains a prototype-based language under the hood, class syntax makes object-oriented programming (OOP) more intuitive and easier to manage.
-
-1. What is a JavaScript Class?
-A class in JavaScript is essentially a blueprint for creating objects. It provides a structured way to define properties and methods.
-
-🔹 Before ES6, JavaScript used constructor functions and prototypes for object creation and inheritance.
-🔹 With ES6 classes, we now have a more object-oriented approach.
-
-Basic Syntax of a Class
 A class is defined using the class keyword followed by the class name.
-
-javascript
-Copy code
 class Car {
   constructor(brand, model, year) {
     this.brand = brand;
@@ -67,10 +64,10 @@ const myCar = new Car("Toyota", "Corolla", 2022);
 myCar.start();  // Output: Toyota Corolla is starting...
 myCar.stop();   // Output: Toyota Corolla is stopping.
 Key Points from the Example:
-Class Declaration: class Car {} defines the class.
-Constructor Method: The constructor is a special method used to initialize object properties.
-Instance Methods: start() and stop() are functions that operate on class instances.
-Creating an Object: new Car("Toyota", "Corolla", 2022) creates an instance of the Car class.
+1. Class Declaration: class Car {} defines the class.
+2. Constructor Method: The constructor is a special method used to initialize object properties.
+3. Instance Methods: start() and stop() are functions that operate on class instances.
+4. Creating an Object: new Car("Toyota", "Corolla", 2022) creates an instance of the Car class.
 
 2. Class Methods and Properties
 
@@ -270,7 +267,8 @@ const car1 = new Car("Honda", "Civic");
 car1.start(); // output: Honda Civic is starting...
 
 
-Conclusion
+Conclusion:
+
 JavaScript classes provide a structured way to implement object-oriented programming. They support: ✅ Object creation using constructor
 ✅ Encapsulation with getters, setters, and private fields
 ✅ Inheritance with extends
