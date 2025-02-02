@@ -1,0 +1,25 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "class.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon class.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhrafi21/js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mhrafi21/js/issues"
+  },
+  "homepage": "https://github.com/mhrafi21/js#readme",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
