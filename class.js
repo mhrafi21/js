@@ -310,26 +310,66 @@
 // console.log(student2);
 
 
-class Person {
-  constructor(name, email){
-    this._name = name;
-    this._email = email;
-  }
+// when we need to update the value of class properties use get and set  me
+// class Person {
+//   constructor(name, email){
+//     this._name = name;
+//     this._email = email;
+//   }
 
-  get name(){
-    console.log("this is a function call!")
-    return this._name;
-  }
+//   get name(){
+//     console.log("this is a function call!")
+//     return this._name.toLowerCase().split(" ")
+//   }
 
-  set name(value){
-    this._name = value;
+//   set name(value){
+//     if(value.toLowerCase() === "rafi") return;
+//     this._name = value;
+//   }
 
-  }
+//   get email(){
+//     return this._email
+//   }
+
+// }
+
+// const person1 = new Person("Mahdi Rafi", "rafi@gmail.com")
+
+// person1._email = "mahdihasanrafi@gmail.com"
+// console.log(person1);
+// person1.name = "rafi" // behind the scene it call the function and update the name -> value;
+// console.log(person1.name);
+// console.log(person1.email);
 
 
-}
+// polymorphism --- override and overloading possible;
 
-const person1 = new Person("Rafi", "rafi@gmail.com")
+// class Person {
+//   constructor(name,email){
+//     this._name = name;
+//     this._email = email;
+//   }
 
-console.log(person1.name);
+//   get name() {
+//     return this._name;
+//   }
+
+//   set name(value){
+//     if(value.toLowerCase() === 'rafi') return;
+//     this._name = value;
+//   }
+
+//   toString(){
+//     //console.log("Person class") // this function is call when the instance is concatenated with string
+//     return `Name: ${this._name}`
+//   }
+// }
+
+// const p1 = new Person("Mahdi Hasan Rafi", "rafi71078@gmail.com");
+
+// console.log(p1 + " ");
+
+
+// static method 
+
 
