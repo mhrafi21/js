@@ -373,3 +373,30 @@
 // static method 
 
 
+class Person {
+  constructor(name,email){
+    this._name = name;
+    this._email = email;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(value){
+    if(value.toLowerCase() === 'rafi') return;
+    this._name = value;
+  }
+
+  toString(){
+    //console.log("Person class") // this function is call when the instance is concatenated with string
+    return `Name: ${this._name}`
+  }
+}
+
+const p1 = new Person("Mahdi Hasan Rafi", "mahdi@gmail.com");
+
+console.log(p1 instanceof Person)
+
+
+console.log(p1 instanceof Person);
