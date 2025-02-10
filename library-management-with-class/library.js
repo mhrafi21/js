@@ -113,31 +113,37 @@ class Library {
     );
   }
 
-  addUser(user){
+  addUser(user) {
     this.users.push(user);
   }
 
-  listUsers(){
+  listUsers() {
     console.log("Library Users");
-    this.users.forEach(user => console.log(`${user.name} (${user.email})`))
+    this.users.forEach((user) => console.log(`${user.name} (${user.email})`));
   }
 }
 
-
 // Example Usage
-const library = new Library()
-const admin = new Admin('Rafi', "rafi@gmail.com", "01");
+const library = new Library();
+const admin = new Admin("Rafi", "rafi@gmail.com", "01");
+
+// searching books
+
 
 // adding Books;
 const books1 = new Book("Harry Potter", "J.K Rowling", "12345678", 19);
+const books2 = new Book("Amar Bangla Boi", "Mahdi Hasan Rafi", 30);
 
 // admin can addBook
-admin.addBook(library,books1);
-
+// admin.addBook(library, books1);
+admin.addBook(library, books2);
+admin.removeBook(library,"Amar Bangla Boi");
 library.listBooks();
 
+// searching books
+
 /// adding users;
-const user1 = new User("mahdirafi", "madhirafi@gmail.com", "02")
+const user1 = new User("mahdirafi", "madhirafi@gmail.com", "02");
 library.addUser(user1);
 library.listUsers();
 
@@ -151,6 +157,3 @@ user1.viewBorrowBooks();
 
 // admin checking borrowed books;
 admin.listAllBorrowBooks(library);
-
-
-
