@@ -60,4 +60,23 @@
 
 // person.age = 34 // Error: Cannot assign to 'age' because it is a read-only property.
 
-5. Conditional 
+// 5. Conditional Types With Generics
+// // We can use conditional types to add login in generic
+
+// type IsArray<T> = T extends any[] ? "Array" : "Not an Array";
+
+// type Test1 = IsArray<string[]>
+// type Test2 = IsArray<number>
+
+// console.log<Test1>(); // Output: "Array"
+// console.log<Test2>(); // Output: "Not Array"
+
+6. Generic Utility Types (Built in Generic).
+
+Partial<T> = Makes all properties optional
+Required<T> = Makes all property required;
+ReadOnly<T> = Makes all Property readonly.
+
+Pick<T,K> = Selects specific property from a type.
+Omit<T,K> = Removes specific properties from a type.
+Record<K,T> = Creates an object specific keys and values.
