@@ -31,12 +31,33 @@
 // 3. keyof with Generics 
 // we can use the keyof operator to ensure type safety when accessing object properties.
 
-function getProperty<T, K extends keyof T>(obj: T, key: K) : T[K] {
+// function getProperty<T, K extends keyof T>(obj: T, key: K) : T[K] {
 
-    return obj[key]
+//     return obj[key]
 
-}
+// }
 
-const user = {name: "Alice", age: 30};
+// const user = {name: "Alice", age: 30};
 
-console.log(getProperty(user, "name"))
+// console.log(getProperty(user, "name"));
+
+// // Here, K extends keyof T, ensures that the key exists in the object;
+
+// 4. Generic Mapped Types
+
+// // We can use generic to create mapped types, which transform object types dynamically.
+
+// type ReadOnlyObj<T> = {
+//     readonly [K in keyof T] : T[K];
+// }
+
+// interface IPerson  {
+//     name: string;
+//     age: number;
+// }
+
+// const person: ReadOnlyObj<IPerson> = {name: "John", age: 40}
+
+// person.age = 34 // Error: Cannot assign to 'age' because it is a read-only property.
+
+5. Conditional 
