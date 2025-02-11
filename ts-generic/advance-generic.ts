@@ -71,12 +71,84 @@
 // console.log<Test1>(); // Output: "Array"
 // console.log<Test2>(); // Output: "Not Array"
 
-6. Generic Utility Types (Built in Generic).
+// 6. Generic Utility Types (Built in Generic).
 
-Partial<T> = Makes all properties optional
-Required<T> = Makes all property required;
-ReadOnly<T> = Makes all Property readonly.
+// Partial<T> = Makes all properties optional
+// Required<T> = Makes all property required;
+// ReadOnly<T> = Makes all Property readonly.
 
-Pick<T,K> = Selects specific property from a type.
-Omit<T,K> = Removes specific properties from a type.
-Record<K,T> = Creates an object specific keys and values.
+// Pick<T,K> = Selects specific property from a type.
+// Omit<T,K> = Removes specific properties from a type.
+// Record<K,T> = Creates an object specific keys and values.
+
+// example: Partial<T>
+
+// interface User {
+//     name: string;
+//     age: number;
+//     email: string
+// }
+
+// const updateUser = (user: Partial<User>) => {
+//     console.log(user);
+// }
+
+// updateUser({name: "Mahdi Hasan Rafi"}) // only updating name is allowed;
+
+// 7. Generic Functions With Promises(Asynchronous Code);
+
+// We can use generics with promises for better type inference in async functions.
+
+// async function fetchData<T>(url: string): Promise<T>{
+//     const response = await fetch(url);
+//     return response.json();
+// }
+
+// interface IPost {
+//     id: number;
+//     title: string;
+// }
+
+// async function getPost(){
+//     const post = await fetchData<IPost>("https://jsonplaceholder.typicode.com/posts/1")
+//     console.log(post.title);
+// }
+
+// getPost();
+
+
+// const fetchData =  async <T>(url: string) : Promise<T> => {
+//     const response = await fetch(url);
+//     return response.json();
+// }
+
+
+// interface IPost  {
+//     id: number;
+//     title: string
+// }
+
+// const getPost = async() => {
+//     const post = await fetchData<IPost>("https://jsonplaceholder.typicode.com/posts/1");
+//     console.log(post.title);
+    
+// }
+
+
+//8. Combining Generics With Interfaces and Inheritance
+
+// We can extend interface with generics for complex structures.
+
+interface Person {
+    firstName: string;
+    lastName?: string;
+    age: number;
+}
+
+interface Employee<T> extends Person {
+    role: T
+}
+
+const dev: Employee<string> = {firstName: "John", age: 34, role: "Software Engineer"}
+
+console.log(dev); //{firstName: "John", age: 34, role: "Software Engineer"}
