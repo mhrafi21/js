@@ -139,16 +139,16 @@
 
 // We can extend interface with generics for complex structures.
 
-interface Person {
-    firstName: string;
-    lastName?: string;
-    age: number;
-}
+// interface Person {
+//     firstName: string;
+//     lastName?: string;
+//     age: number;
+// }
 
-interface Employee<T> extends Person {
-    role: T
-}
+// interface Employee<T> extends Person {
+//     role: T
+// }
 
-const dev: Employee<string> = {firstName: "John", age: 34, role: "Software Engineer"}
+// const dev: Employee<string> = {firstName: "John", age: 34, role: "Software Engineer"}
 
-console.log(dev); //{firstName: "John", age: 34, role: "Software Engineer"}
+// console.log(dev); //{firstName: "John", age: 34, role: "Software Engineer"}
