@@ -111,10 +111,30 @@
 // Web Workers
 // Run scripts in the background.
 
-const worker = new Worker("worker.js");
-worker.postMessage("Hello Worker!");
-worker.onmessage = (event) => console.log(event.data);
+// const worker = new Worker("worker.js");
+// worker.postMessage("Hello Worker!");
+// worker.onmessage = (event) => console.log(event.data);
 
-self.onmessage = () => {
-    self.postMessage(`Worker received: ${event.data}`)
+// self.onmessage = () => {
+//     self.postMessage(`Worker received: ${event.data}`)
+// }
+
+// Event Delegation
+
+// document.querySelector("#parent").addEventListener("click", function(event){
+//      if(event.target.matches(".child")){
+//         console.log("Child clicked")
+//      }
+// })
+
+
+// Proxies(Meta Programming);
+
+const handler = {
+    get: (target,prop) => (prop in target ? target[prop] : "Property not found!")
 }
+
+const person = new Proxy({name: "John"}, handler);
+console.log(person.name);
+console.log(person.age);
+
