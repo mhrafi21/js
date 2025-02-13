@@ -41,15 +41,57 @@
 
 // Debouncing Function
 
-function debounce(){
-    let timeout;
+// function debounce(){
+//     let timeout;
 
-    return function (...args){
-        clearATimeout(timeout)
-        timeout = setTimeout(() => func(...args), delay);
-    }
-}
+//     return function (...args){
+//         clearTimeout(timeout)
+//         timeout = setTimeout(() => func(...args), delay);
+//     }
+// }
 
-const handleResize = debounce(() => console.log("Resized!", 500));
+// const handleResize = debounce(() => console.log("Resized!", 500));
 
-document.addEventListener("resize", handleResize);
+// console.log(handleResize())
+// document.addEventListener("resize", handleResize);
+
+// Throttling Function
+
+// function throttle (func, limit) {
+//     let inThrottle;
+//     return function(...args){
+//         func(...args)
+//         inThrottle = true;
+//         setTimeout(() => (inThrottle == false),limit)
+//     }
+// }
+
+// const logScroll = throttle(() => console.log("scrolled!", 1000));
+// console.log(logScroll());
+
+// Generators
+// Functions that can be paused and resumed;
+
+// function* generatorFunction(){
+//     yield "hello";
+//     yield "World";
+//     return yield
+// }
+
+// const gen = generatorFunction();
+
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+
+// Web Storage (LocalStorage & SessionStorage)
+
+// localStorage.setItem("username", "Rafi");
+// localStorage.getItem("username");
+
+// sessionStorage.setItem("sessionKey", "123456");
+// sessionStorage.getItem("sessionKey");
+
+// Web APIs
+
