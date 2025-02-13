@@ -95,3 +95,26 @@
 
 // Web APIs
 
+// fetch("https://jsonplaceholder.typecode.com/posts/2",{
+//     method: "POST",
+//     body: JSON.stringify({
+//         title: "New Post",
+//         body: "This is a new Post.",
+//         userID: 1
+//     }),
+//     headers: {"Content-type": "application/json"}
+// })
+// .then(response = response.json())
+// .then(data => console.log(data))
+
+
+// Web Workers
+// Run scripts in the background.
+
+const worker = new Worker("worker.js");
+worker.postMessage("Hello Worker!");
+worker.onmessage = (event) => console.log(event.data);
+
+self.onmessage = () => {
+    self.postMessage(`Worker received: ${event.data}`)
+}
