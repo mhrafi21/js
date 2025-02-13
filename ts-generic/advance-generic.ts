@@ -131,7 +131,7 @@
 // const getPost = async() => {
 //     const post = await fetchData<IPost>("https://jsonplaceholder.typicode.com/posts/1");
 //     console.log(post.title);
-    
+
 // }
 
 
@@ -152,3 +152,48 @@
 // const dev: Employee<string> = {firstName: "John", age: 34, role: "Software Engineer"}
 
 // console.log(dev); //{firstName: "John", age: 34, role: "Software Engineer"}
+
+
+
+// 9. Generic Factory Functions
+
+// We can create factory functions that return instances of generic types.
+
+// function createInstance<T>(Ctor: {new (): T}): T {
+//     return new Ctor();
+
+// }
+
+// class Car {
+//     drive(){
+//         console.log("driving...")
+//     }
+// }
+
+// const myCar = createInstance(Car);
+// myCar.drive(); // output: Driving...
+
+// // Here, {new (): T} ensures Ctor is a class constructor;
+
+// 10. Generic Functions With Multiple Constraints
+
+// // We can combine constraints using the & operator.
+
+// function merge<T extends object, U extends object>(obj1: T, obj2: U ): T & U{
+//     return {...obj1, ...obj2};
+// }
+
+// const person = {name: "Rafi"};
+// const job = {title: "Development"};
+
+// const employee = merge(person, job);
+// console.log(employee);
+
+
+
+
+function merge<T extends object, U extends object>(obj1: T, obj2: U): T & U {
+    <T, U >: This means that the function is generic, meaning it can work with any object type.
+    T extends object: This ensures that T must be an object(not a string, number, etc.).
+    U extends object: This ensures that U must also be an object.
+    T & U(Return Type): The function returns a new object that combines both T and U.

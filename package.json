@@ -5,7 +5,7 @@
   "main": "class.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon library-management-with-class/library.js"
+    "start":"nodemon advanced-js/advanced.js"
   },
   "repository": {
     "type": "git",
